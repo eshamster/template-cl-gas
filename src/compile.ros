@@ -1,0 +1,25 @@
+#!/bin/sh
+#|-*- mode:lisp -*-|#
+#|
+exec ros -Q -- $0 "$@"
+|#
+(progn ;;init forms
+  (ros:ensure-asdf)
+  #+quicklisp(ql:quickload '(:{{name}}) :silent t)
+  )
+
+(defpackage :ros.script.compile.{{name}}
+  (:use :cl)
+  (:import-from :{{name}}
+                :compile-gas))
+(in-package :ros.script.compile.{{name}})
+
+(defun main (&rest argv)
+  (declare (ignorable argv))
+  (with-open-file (out "main.js"
+                       :direction :output
+                       :if-exists :supersede
+                       :if-does-not-exist :create)
+    (compile-gas out)))
+;;; vim: set ft=lisp lisp:
+
