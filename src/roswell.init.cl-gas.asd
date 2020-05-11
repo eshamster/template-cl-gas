@@ -11,7 +11,6 @@
      (:NAME "roswell.init.cl-gas.asd" :METHOD "djula")
      (:NAME "main.lisp" :METHOD "djula")
      (:NAME "compile.ros" :METHOD "djula" :CHMOD "755")
-     (:NAME "appsscript.json" :METHOD "djula")
      (:NAME "_name_.asd" :METHOD "djula" :REWRITE "{{ name }}.asd")
      (:NAME "README.markdown" :METHOD "djula")
      (:NAME "Makefile" :METHOD "djula"))
