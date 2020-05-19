@@ -8,7 +8,6 @@
      (:NAME ".clasp.json.in" :METHOD "djula")
      (:NAME "src/main.lisp" :METHOD "djula")
      (:NAME "src/compile.lisp" :METHOD "djula")
-     (:NAME "roswell.init.cl-gas.asd" :METHOD "djula")
      (:NAME "main.lisp" :METHOD "djula")
      (:NAME "compile.ros" :METHOD "djula" :CHMOD "755")
      (:NAME "_name_.asd" :METHOD "djula" :REWRITE "{{ name }}.asd")
